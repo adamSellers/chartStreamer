@@ -1,5 +1,5 @@
 <aura:component >
-    <ltng:require scripts="{!$Resource.chartJS}" afterScriptsLoaded="{!c.drawChart}" />
+    <ltng:require scripts="{!$Resource.chartJS26}" afterScriptsLoaded="{!c.drawChart}" />
     <aura:attribute name="inboundEvents" type="Object" />
     <aura:handler name="change" value="{!v.inboundEvents}" action="{!c.drawChart}" />
 
