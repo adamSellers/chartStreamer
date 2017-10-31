@@ -1,0 +1,5 @@
+<design:component label="Event Stream Chart">
+    <design:attribute name="platformEvent" default="Enter Event" />
+    <design:attribute name="yAxisFieldName" default="Field that stores the value you wish to chart" />
+    <design:attribute name="chartLabel" default="Enter the label of your chart" />
+</design:component>

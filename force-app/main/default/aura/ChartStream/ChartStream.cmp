@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="inboundEvents" type="Object[]" default="[]" />
+    <aura:attribute name="platformEvent" type="String" />
+    <aura:attribute name="yAxisFieldName" type="String" />
+    <aura:attribute name="chartLabel" type="String" />
+    <aura:handler event="ltng:sendMessage" action="{!c.consumeEvent}" />
+
+
+    <!--using the streaming event component -->
+    <div class="slds-card">
+        <div class="slds-card__header">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__body">
+                    <h2>
+                        <span class="slds-text-heading_small">Inbound Stream for {#v.platformEvent}</span>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <c:Streamer platformEvent="{#v.platformEvent}" />
+            <!-- TODO add the chart component -->
+            <c:ChartCard inboundEvents="{!v.inboundEvents}" />
+        </div>
+    </div>
+</aura:component>
